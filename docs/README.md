@@ -1,7 +1,7 @@
 # ⚰️ Homelab Graveyard & Lessons Learned: The Frugal SRE Manifesto
 
 > **Author:** Gabriel Santa Rosa Lessa  
-> **Timeline:** 2025 – Present (School Research 2025 - Aug/2026 · Intensive Hands-on Aug/2026 - Present)  
+> **Timeline:** 2025 – Present (College Studies 2025 - Aug/2026 · Intensive Hands-on Aug/2026 - Present)  
 > **Core Focus:** Technical Honesty · Hardware Resource Profiling · Technical Debt Elimination  
 > **Culture:** Engineering Post-Mortems & Pragmatic Software Architecture Tradeoffs
 
