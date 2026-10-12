@@ -1,0 +1,5 @@
+* [Manifesto & Visão Geral](README.md)
+* [Caso 01: Portainer vs Komodo](case-01-portainer-vs-komodo.md)
+* [Caso 02: Por que Matamos o n8n](case-02-why-we-killed-n8n.md)
+* [Caso 03: Auditoria do Asuri](case-03-asuri-source-audit.md)
+* [Caso 04: Wazuh vs Velociraptor](case-04-wazuh-vs-velociraptor.md)
