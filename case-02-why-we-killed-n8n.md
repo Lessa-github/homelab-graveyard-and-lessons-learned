@@ -1,13 +1,13 @@
-# Caso 02: O Assassinato do N8N — A Matemática da Memória Node.js
+# Case 02: Why We Killed n8n — The Mathematics of Node.js Runtime Bloat
 
-## O Sintoma:
-O container do N8N rodando em Node.js com SQLite atingia picos de **1.5 GB a 2.0 GB de RAM** mesmo quando nenhum webhook estava sendo processado ativamente.
+## The Diagnostic Symptom:
+The monolithic n8n container executing on the Node.js V8 engine with SQLite crept to persistent peaks of **1.5 GB to 2.0 GB of resident RAM**, even during prolonged periods without active webhook payloads.
 
-## A Decisão:
-Descartamos a interface visual de nós para automações críticas do laboratório e escrevemos **scripts modulares em Python e servidores MCP**.
+## The Engineering Decision:
+We eliminated visual drag-and-drop workflow graphs for critical homelab automations, replacing them with **lean Python async daemons and lightweight Model Context Protocol (MCP) servers**.
 
-| Métrica | N8N (Node.js) | Scripts Python + FastMCP | Ganho |
+| Architectural Metric | n8n Monolith (Node.js) | Python Async + FastMCP | SRE Gain |
 | :--- | :--- | :--- | :--- |
-| **Footprint em Repouso** | 1.480 MB | **28 MB** | **-98.1% de RAM** |
-| **Inicialização** | ~25 segundos | **<0.2 segundos** | **125x mais rápido** |
-| **Rastreabilidade** | JSON opaco no banco | Código Python limpo no Git | 100% Auditável |
+| **Idle Memory Footprint** | 1,480 MB | **28 MB** | **-98.1% Physical RAM** |
+| **Daemon Initialization** | ~25 seconds | **<0.2 seconds** | **125x Faster** |
+| **Version Auditability** | Opaque database JSON | Clean Git-versioned Python | 100% Code-Reviewable |

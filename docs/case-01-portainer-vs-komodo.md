@@ -1,22 +1,9 @@
-# ⚰️ Caso 01: Por que Aposentamos o Portainer em Favor do Komodo
+# Case 01: Decommissioning Portainer in Favor of Komodo Orchestrator
 
-Durante a fase inicial do laboratório, utilizamos o **Portainer Business Edition (CT 109)** para gerenciar stacks de contêineres Docker. 
+## Architectural Liabilities of Portainer
+* **Memory Bloat:** Portainer Server and its agents consumed high idle resident memory relative to actual container orchestration workloads.
+* **Imperative ClickOps Model:** Encouraged unversioned ad-hoc modifications directly inside the web UI, generating configuration drift and breaking Infrastructure as Code (IaC) guarantees.
 
-Apesar de ser uma ferramenta consagrada no mercado, sua operação em escala de alta densidade no Proxmox VE revelou limitações estruturais:
-
----
-
-## 🔍 O Problema Técnico do Portainer
-
-1. **Footprint Excessivo de Agentes:** Cada agente Portainer consumia de 80 a 120 MB de RAM apenas para responder heartbeats de API, além de manter conexões gRPC pesadas e persistentes.
-2. **GitOps Frágil:** A sincronização de repositórios Git no Portainer exigia webhooks externos ou polling periódico ineficiente, com histórico de deploys concorrentes que quebravam o estado desejado.
-3. **Dependência de UI:** A interface web encorajava modificações manuais fora do código-fonte (*clickOps*), contrariando as boas práticas de infraestrutura declarativa.
-
----
-
-## 🚀 A Solução: Komodo Orchestrator
-
-Migramos o ecossistema para o **Komodo Orchestrator**:
-* **Periphery Agent em Rust:** Consumo inferior a **18 MB de RAM** por nó.
-* **GitOps Nativo:** Declaração de stacks em YAML versionadas no Git com sincronização atômica.
-* **Zero Telemetria Externa:** O Komodo não envia dados analíticos para nuvens proprietárias.
+## The Engineering Solution: Komodo Orchestrator
+* **Rust Periphery Agents:** Each node executes an ultra-lightweight compiled daemon consuming under 18 MB of RAM.
+* **Declarative Native GitOps:** Deployment stacks are declared in Git-versioned YAML manifests, guaranteeing deterministic state and atomic rollbacks.

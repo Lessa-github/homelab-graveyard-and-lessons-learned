@@ -1,10 +1,10 @@
-# Caso 04: Wazuh Cluster (6 GB) vs. Velociraptor (67 MB)
+# Case 04: Wazuh SIEM Cluster (6 GB RAM) vs. Velociraptor VQL (67 MB RAM)
 
-A sabedoria convencional diz para subir um cluster completo de Wazuh com indexador OpenSearch e dashboard Kibana.
+Conventional homelab tutorials recommend deploying full enterprise Wazuh clusters with OpenSearch indexers and Kibana/Wazuh dashboards.
 
-No nosso hardware físico (onde 32 GB de RAM precisam alimentar mais de 15 serviços e laboratórios de IA), gastar 20% da memória total em JVMs não fazia sentido de engenharia.
+On a physical 32 GB host where RAM must sustain 15+ concurrent production services and sovereign AI workflows, dedicating ~20% of physical capacity to Java Virtual Machine (JVM) heaps represented poor SRE judgment.
 
-Adotamos o **Velociraptor**:
-* Binário Go único de 40 MB.
-* 67 MB de RAM física consumida.
-* Poder de busca forense superior via VQL em tempo real.
+### The Winning Alternative: Velociraptor
+* **Single Statically Compiled Go Binary:** 40 MB executable.
+* **Minimal Resource Footprint:** Operates at exactly **67 MB resident physical RAM**.
+* **Superior Forensic Depth:** Real-time in-memory digital forensics and threat hunting powered by declarative VQL.

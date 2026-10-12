@@ -1,9 +1,9 @@
-# Caso 01: Por que Aposentamos o Portainer em Favor do Komodo
+# Case 01: Decommissioning Portainer in Favor of Komodo Orchestrator
 
-## O Problema do Portainer
-* **Consumo de Memória:** O Portainer Server mantinha um footprint elevado para o que oferecia.
-* **Modelo Imperativo:** Incentiva a alteração manual de containers via interface gráfica ("clicar para mudar portas"), gerando drift de configuração e quebrando o princípio de infraestrutura como código (IaC).
+## Architectural Liabilities of Portainer
+* **Memory Bloat:** Portainer Server and its agents consumed high idle resident memory relative to actual container orchestration workloads.
+* **Imperative ClickOps Model:** Encouraged unversioned ad-hoc modifications directly inside the web UI, generating configuration drift and breaking Infrastructure as Code (IaC) guarantees.
 
-## A Solução com Komodo Orchestrator
-* **Agentes Periphery em Rust:** Cada nó roda um daemon ultraleve em Rust consumindo menos de 15 MB de RAM.
-* **GitOps Nativo:** Mudanças são declaradas em arquivos de stack versionados, permitindo rollback imediato.
+## The Engineering Solution: Komodo Orchestrator
+* **Rust Periphery Agents:** Each node executes an ultra-lightweight compiled daemon consuming under 18 MB of RAM.
+* **Declarative Native GitOps:** Deployment stacks are declared in Git-versioned YAML manifests, guaranteeing deterministic state and atomic rollbacks.

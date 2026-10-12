@@ -1,8 +1,8 @@
-# Caso 03: Auditoria Estática de Código do Asuri/Azuri
+# Case 03: Static Security Code Audit & Disqualification of Asuri/Azuri
 
-Ao analisar o repositório open-source do Asuri antes de integrá-lo ao pipeline, nossa auditoria estática identificou:
-1. Dependências não pinadas com vulnerabilidades críticas conhecidas no ecossistema npm.
-2. Falta de sanitização adequada em parâmetros de execução de comandos do sistema operacional.
-3. Tratamento de permissões que exigia privilégios de root desnecessários dentro do container.
+During pre-deployment Static Application Security Testing (SAST) of the open-source Asuri repository, our AppSec audit identified multiple disqualifying liabilities:
+1. **Unpinned Vulnerable Dependencies:** Outdated npm packages containing critical CVEs allowing Remote Code Execution (RCE).
+2. **Command Injection Risks:** Insufficient parameter sanitization prior to system-level subshell invocation.
+3. **Overprivileged Runtime Requirements:** Unnecessary root permission demands incompatible with unprivileged LXC security baselines.
 
-**Veredito:** O software foi desqualificado e banido do ambiente de produção.
+**Engineering Verdict:** The tool was summarily disqualified and blacklisted from homelab production deployment.

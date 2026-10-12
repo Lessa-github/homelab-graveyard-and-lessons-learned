@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 The Frugal SRE Manifesto
+## 📋 The Frugal SRE Manifesto :id=frugal-manifesto
 
 In Site Reliability Engineering (SRE), the most underappreciated senior competency is not knowing what tools to install, but knowing **when and why to remove tools**.
 
@@ -22,7 +22,7 @@ This repository documents the benchmarks, memory profiling sessions, and securit
 
 ---
 
-## 📊 Summary of Decommissioned Stacks
+## 📊 Summary of Decommissioned Stacks :id=summary-matrix
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -39,7 +39,7 @@ This repository documents the benchmarks, memory profiling sessions, and securit
 
 ---
 
-## ⚰️ Case 01: Decommissioning Portainer for Komodo
+## ⚰️ Case 01: Decommissioning Portainer for Komodo :id=case-01-portainer
 
 During early lab iterations, **Portainer Business Edition (CT 109)** was deployed to manage Docker container stacks. While popular, high-density operation exposed architectural bottlenecks:
 
@@ -56,7 +56,7 @@ We migrated container orchestration to **Komodo**:
 
 ---
 
-## ⚰️ Case 02: Why We Killed n8n (-1.5 GB RAM)
+## ⚰️ Case 02: Why We Killed n8n (-1.5 GB RAM) :id=case-02-n8n
 
 **n8n** is a widespread visual workflow automation platform. In an environment with a finite 32 GB RAM ceiling where every service must justify its presence, n8n proved unviable:
 
@@ -74,7 +74,7 @@ Replaced the n8n monolith with:
 
 ---
 
-## ⚰️ Case 03: Asuri Source Code Security Audit
+## ⚰️ Case 03: Asuri Source Code Security Audit :id=case-03-asuri
 
 Before allowing any third-party open-source repository into production, we execute strict **AppSec and Static Application Security Testing (SAST)**. The case of the **Asuri (or Azuri)** tool exemplifies why code review precedes deployment:
 
@@ -88,7 +88,7 @@ The software was **summarily disqualified** from deployment. This case study dem
 
 ---
 
-## ⚰️ Case 04: Wazuh Cluster vs Velociraptor VQL
+## ⚰️ Case 04: Wazuh Cluster vs Velociraptor VQL :id=case-04-wazuh
 
 **Wazuh** is a respected enterprise SIEM, but its architecture—built on **OpenSearch/Elasticsearch and the Java Virtual Machine (JVM)**—imposes severe hardware taxation:
 
@@ -105,9 +105,10 @@ Replaced the 6 GB cluster with **Velociraptor**:
 
 ---
 
-## 🔗 Connected Repositories & Live Portals
+## 🔗 Connected Portals & Repositories :id=connected-portals
 
 * 🏛️ **[Homelab Zero-Trust](https://lessa-github.github.io/homelab-zero-trust-infra/)** — Network Topology, Proxmox VE & SRE Hardening.
 * 🛡️ **[Cyber DFIR Training Lab](https://lessa-github.github.io/cyber-dfir-training-lab/)** — Digital Forensics, Velociraptor (67MB RAM) & Purple Teaming.
 * 🧠 **[Sovereign AI Workspace](https://lessa-github.github.io/sovereign-ai-workspace/)** — Multi-Provider Gateway, Caveman Compression & Private Search.
+* 🌐 **[Gabriel Lessa Portfolio](https://lessa-github.github.io/gabriel-portfolio/)** — Cybersecurity Risk Management & Homelab Engineering.
 * 🔒 **[Zero-Knowledge Secret Framework](https://github.com/Lessa-github/zero-knowledge-secret-framework)** — Ephemeral Memory Secret Injection Engine (Private).
