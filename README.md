@@ -23,18 +23,12 @@ This repository compiles the empirical benchmarks, memory profiling sessions, an
 
 ## 📂 Decommissioned Software Case Studies
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│             DECOMMISSIONED SOFTWARE CASE STUDIES MATRIX                │
-├─────────┬──────────────────────┬───────────────────────┬───────────────┤
-│ Case    │ Retired Platform     │ Modern Replacement    │ SRE Advantage │
-├─────────┼──────────────────────┼───────────────────────┼───────────────┤
-│ Case 01 │ Portainer BE         │ Komodo Orchestrator   │ Rust GitOps   │
-│ Case 02 │ n8n Workflow Monolith│ Hermes Agent + MCP    │ -1.5 GB RAM   │
-│ Case 03 │ Asuri / Azuri        │ Static Audit Disqual. │ Zero Backdoor │
-│ Case 04 │ Wazuh SIEM Cluster   │ Velociraptor VQL      │ 67 MB RAM     │
-└─────────┴──────────────────────┴───────────────────────┴───────────────┘
-```
+| Case Study | Retired Platform | Modern Replacement | Primary SRE Advantage | Net Resource Impact |
+| :---: | :--- | :--- | :--- | :---: |
+| **Case 01** | `Portainer Business Edition` | `Komodo Orchestrator` (Periphery) | Declarative Rust GitOps & Atomic Sync | **<18 MB RAM** per agent |
+| **Case 02** | `n8n Workflow Monolith` | `Hermes Autonomous Agent + MCP` | Event-driven async Python & on-demand execution | **-1,450 MB RAM** reclaimed |
+| **Case 03** | `Asuri / Azuri Scanner` | `Static SAST Code Audit (Disqualified)` | Elimination of arbitrary command injection | **Zero Backdoor Risk** |
+| **Case 04** | `Wazuh + OpenSearch SIEM` | `Velociraptor VQL Engine` | Live surgical endpoint queries vs JVM heap bloat | **-5,933 MB RAM** (98.9% less) |
 
 * **[Case 01: Why We Decommissioned Portainer](https://lessa-github.github.io/homelab-graveyard-and-lessons-learned/#/case-01-decommissioning-portainer-for-komodo):** How migrating to Komodo delivered real GitOps, lower agent latency, and slashed memory overhead.
 * **[Case 02: Why We Killed n8n](https://lessa-github.github.io/homelab-graveyard-and-lessons-learned/#/case-02-why-we-killed-n8n--15-gb-ram):** Memory profiling of Node.js processes leaking >1.5 GB of RAM for simple automated webhooks now running in 30 MB via Python and MCP.

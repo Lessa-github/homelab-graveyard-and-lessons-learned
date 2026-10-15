@@ -24,18 +24,12 @@ This repository documents the benchmarks, memory profiling sessions, and securit
 
 ## 📊 Summary of Decommissioned Stacks :id=summary-matrix
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│             DECOMMISSIONED SOFTWARE CASE STUDIES MATRIX                │
-├─────────┬──────────────────────┬───────────────────────┬───────────────┤
-│ Case    │ Retired Platform     │ Modern Replacement    │ SRE Advantage │
-├─────────┼──────────────────────┼───────────────────────┼───────────────┤
-│ Case 01 │ Portainer BE         │ Komodo Orchestrator   │ Rust GitOps   │
-│ Case 02 │ n8n Workflow Monolith│ Hermes Agent + MCP    │ -1.5 GB RAM   │
-│ Case 03 │ Asuri / Azuri        │ Static Audit Disqual. │ Zero Backdoor │
-│ Case 04 │ Wazuh SIEM Cluster   │ Velociraptor VQL      │ 67 MB RAM     │
-└─────────┴──────────────────────┴───────────────────────┴───────────────┘
-```
+| Case Study | Retired Platform | Modern Replacement | Primary SRE Advantage | Net Resource Impact |
+| :---: | :--- | :--- | :--- | :---: |
+| **Case 01** | `Portainer Business Edition` | `Komodo Orchestrator` (Periphery) | Declarative Rust GitOps & Atomic Sync | **<18 MB RAM** per agent |
+| **Case 02** | `n8n Workflow Monolith` | `Hermes Autonomous Agent + MCP` | Event-driven async Python & on-demand execution | **-1,450 MB RAM** reclaimed |
+| **Case 03** | `Asuri / Azuri Scanner` | `Static SAST Code Audit (Disqualified)` | Elimination of arbitrary command injection | **Zero Backdoor Risk** |
+| **Case 04** | `Wazuh + OpenSearch SIEM` | `Velociraptor VQL Engine` | Live surgical endpoint queries vs JVM heap bloat | **-5,933 MB RAM** (98.9% less) |
 
 ---
 
