@@ -102,6 +102,7 @@ Replaced the 6 GB cluster with **Velociraptor**:
 ## 🔗 Connected Portals & Repositories :id=connected-portals
 
 * 🏛️ **[Homelab Zero-Trust](https://lessa-github.github.io/homelab-zero-trust-infra/)** — Network Topology, Proxmox VE & SRE Hardening.
+* 📦 **[Curated GitHub Repository Directory](https://lessa-github.github.io/homelab-zero-trust-infra/#/?id=vetted-repositories)** — Active, Decommissioned, Roadmap & MCP Stacks.
 * 🛡️ **[Cyber DFIR Training Lab](https://lessa-github.github.io/cyber-dfir-training-lab/)** — Digital Forensics, Velociraptor (67MB RAM) & Purple Teaming.
 * 🧠 **[Sovereign AI Workspace](https://lessa-github.github.io/sovereign-ai-workspace/)** — Multi-Provider Gateway, Caveman Compression & Private Search.
 * 🌐 **[Gabriel Lessa Portfolio](https://lessa-github.github.io/gabriel-portfolio/)** — Cybersecurity Risk Management & Homelab Engineering.
